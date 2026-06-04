@@ -77,6 +77,11 @@ outputs:
     requirements:
       run:
         - ${{ pin_subpackage("fastbdt", exact=true) }}
+    # Redundant tests to satisfy linter
+    tests:
+      - python:
+          imports:
+            - PyFastBDT
 
 about:
   summary: "FastBDT: Stochastic gradient-boosted decision trees for multivariate classification, usable standalone and via Python interface"
